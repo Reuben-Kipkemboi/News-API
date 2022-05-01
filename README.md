@@ -94,6 +94,9 @@ chmod a+x start.sh
 ## License
 [MIT License](LICENSE)
 
+## Design
+* #### [Simple Figma Design](https://www.figma.com/file/LE3PufeR4ye2q4UiP3Khht/News-Api?node-id=0%3A1)
+
 ## Authors Info
 * Slack - [Reuben Kipkemboi]()
 
