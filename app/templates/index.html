@@ -12,6 +12,19 @@
     {% endif %}
 </head>
 <body>
+    <h2>News Sources</h2>
+    <ul>
+        {% for news_source in sources%}
+            <li>{{news_source.name}}
+                <br>
+                {{news_source.description}}
+                <br>
+                <span>Language: {{news_source.language}}  ---- country: <em>{{news_source.country}}</em> </span>
+                <br>
+                <a href="{{news_source.url}}"><button>see News</button></a>
+            </li>
+        {%endfor%}
+    </ul>
     
 </body>
 </html>
