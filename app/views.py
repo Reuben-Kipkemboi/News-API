@@ -1,7 +1,6 @@
-from imp import source_from_cache
 from flask import render_template
 from app import app
-from.request import get_news
+from.request import get_news, get_article
 
 @app.route("/")
 def home():
@@ -15,10 +14,11 @@ def home():
     title = "welcome to Reuby News ---Todays insights"
     return render_template('index.html', title = title, sources=news_sources)
 
-@app.route('/news/<source_id>')
-def news_details(source_id):
+@app.route('/articles/<id>')
+def articles(id):
     """_
     to display news and article details
     """
-    return render_template("news_details.html", id=source_id)
+    articles = get_article(id)
+    return render_template("news_details.html", id = id, articles =articles)
 

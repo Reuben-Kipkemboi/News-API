@@ -9,6 +9,7 @@
             <br>
             <span>Language: {{news_source.language}}  ---- country: <em>{{news_source.country}}</em> </span>
             <br>
+            <p><a href="/articles/{{news_source.id}}">CheckOut {{news_source.name}} Articles </a></p>
             <a href="{{news_source.url}}"><button>see News</button></a>
         </li>
     {%endfor%}
