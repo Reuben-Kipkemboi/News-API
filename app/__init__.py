@@ -1,14 +1,22 @@
 from flask import Flask
-
-from config import DevConfig
+from flask_bootstrap import Bootstrap
+from config import config_options
+bootstrap = Bootstrap()
 
 # Initializing our news application
-app = Flask(__name__,instance_relative_config = True) #connecting to instance folder when app is instantiated
+def create_app(config_name):
+    app = Flask(__name__) #connecting to instance folder when app is instantiated
 
 #setting up development configuration
-app.config.from_object(DevConfig)
+    app.config.from_object(config_options[config_name])
 # Getting our api instance folder to access our key
-app.config.from_pyfile('config.py')
-
-
-from app.main import views
+   
+    bootstrap.init_app(app)
+    # Registering the blueprint
+    from .main import main as main_blueprint
+    app.register_blueprint(main_blueprint)
+    
+    # setting config
+    from .request import configure_request
+    configure_request(app)
+    return app
