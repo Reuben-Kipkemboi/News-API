@@ -21,11 +21,18 @@
     {% if title %}
     <title> {{ title }}</title>
     {% else %}
-    <title>welcome to Reuby News ---Todays insights </title>
+    <title>welcome to ReubyBox News ---The Home of insights </title>
     {% endif %}
 </head>
 
 <body>
+    <div class="col-md-12">
+        <!-- Navbar block  -->
+        {% block navbar %}
+        {% include 'navbar.html' %}
+        {% endblock %}
+    </div>
+
     {%block content%}
 
     {%endblock%}
