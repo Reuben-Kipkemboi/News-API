@@ -2,24 +2,38 @@
 
 {% block styles%}
     {{ super() }}
-    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 {% endblock %}
 {%block content%}
-<h2>News Sources</h2>
-<ul>
-    {% for news_source in sources%}
-        <li>{{news_source.name}}
-            <br>
-            {{news_source.description}}
-            <br>
-            <span>Language: {{news_source.language}}  ---- country: <em>{{news_source.country}}</em> </span>
-            <br>
-            <p><a href="/articles/{{news_source.id}}">CheckOut {{news_source.name}} Articles </a></p>
-            <a href="{{news_source.url}}"><button>see News</button></a>
+<div class="container-fluid">
+    <h2 class="text-center" id="title"> <span>New</span> Sources</h2>
+
+    <ul>
+        {% for news_source in sources%}
+        <li>
+            <div class="card col-md-4 text-center">
+                <div class="card-body">
+                    <h5 class="card-title">{{news_source.name}}</h5>
+                    <hr>
+                    <p class="card-text">
+                        {{news_source.description}}
+                    </p>
+                    <span>Language: {{news_source.language}} ---- country: <em>{{news_source.country}}</em> </span>
+                    <br>
+
+                    <a href="/articles/{{news_source.id}}"><button type="button" class="btn btn-outline-info">CheckOut
+                            {{news_source.name}} Articles</button> </a>
+                        <br>
+                        <br>
+                    <a href="{{news_source.url}}"><button type = "button" class="btn btn-outline-info btn-sm">see News</button></a>
+                </div>
+            </div>
+
         </li>
-    {%endfor%}
-</ul>
+    </ul>
+</div>
+
+{%endfor%}
 {%endblock%}
-    
+
 <!-- font-family: 'Darker Grotesque', sans-serif; -->
 <!-- font-family: 'Nunito', sans-serif; -->

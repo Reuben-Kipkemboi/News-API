@@ -1,0 +1,13 @@
+*{
+    font-family: 'Darker Grotesque', sans-serif;
+    
+}
+ul li{
+    list-style-type: none;
+}
+#title{
+    color: brown;
+}
+#title span{
+    color: black;
+}
