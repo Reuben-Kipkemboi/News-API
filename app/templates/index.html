@@ -12,15 +12,15 @@
         <li>
             <div class="card col-md-4 text-center">
                 <div class="card-body">
-                    <h5 class="card-title">{{news_source.name}}</h5>
+                    <h5 class="card-title fw-bold fs-4">{{news_source.name}}</h5>
                     <hr>
-                    <p class="card-text">
+                    <p class="card-text fs-5">
                         {{news_source.description}}
                     </p>
-                    <span>Language: {{news_source.language}} ---- country: <em>{{news_source.country}}</em> </span>
+                    <span id="font"> <i class="fa-solid fa-language"></i> Language<em class="fw-bold fs-4">{{news_source.language}}</em> <i class="fa-solid fa-earth-europe"></i> country: <em class="fw-bold fs-4">{{news_source.country}}</em> </span>
                     <br>
 
-                    <a href="/articles/{{news_source.id}}"><button type="button" class="btn btn-outline-info">CheckOut
+                    <a href="/articles/{{news_source.id}}"><button type="button" class="btn btn-outline-info fw-bold">CheckOut
                             {{news_source.name}} Articles</button> </a>
                         <br>
                         <br>

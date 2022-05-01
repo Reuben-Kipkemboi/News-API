@@ -1,9 +1,14 @@
 *{
     font-family: 'Darker Grotesque', sans-serif;
     
+    
 }
-ul li{
+
+    
+ ul li{
     list-style-type: none;
+    display: flex;
+    
 }
 #title{
     color: brown;
