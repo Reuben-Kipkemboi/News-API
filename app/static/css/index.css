@@ -16,3 +16,13 @@
 #title span{
     color: black;
 }
+
+/* articles page styling */
+#img-responsive{
+    width: 100%;
+    height: 220px;
+}
+#article-card{
+    height: 80vh;
+    background-color: red;
+}

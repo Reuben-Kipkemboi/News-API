@@ -1,29 +1,27 @@
 {%extends 'base.html'%}
 {% block content %}
-
-<div class="container-fluid bg-light">
+<div class="container-fluid bg-light" id="cover">
     <h2 class="text-center">Our Latest, Hottest Articles</h2>
     <div class="row text-center">
         {% for article in articles %}
         <div class="col-md-4">
 
-            <div class="card border-info mb-3">
+            <div class="card border-primary mb-3">
                 <div>
-                    <img src="{{article.urlToImage}}" class="img-responsive" alt="">
+                    <img src="{{article.urlToImage}}" class="img-responsive" id="img-responsive" alt="image" style="height:220px; width:100%">
                 </div>
-                <div class="card-header">
-                    <h4 class="title">
+                <div class="card-header text-center fw-bold">
+                    <h4 class="title bg-light">
                         {{article.title}}
                     </h4>
                 </div>
-                <hr>
-                <div class="card-body">
+                <div class="card-body text-center">
                     <p class="desc">{{article.description}}</p>
-                    <a href="{{article.url}}" class="btn btn-outline-info" target="_blank"">Get Full Article</a>
+                    <a href="{{article.url}}" class="btn btn-outline-info" target="_blank"">Checkout the Article in Details</a>
 
                 </div>
                 <div class="card-footer text-muted">
-                   <em>Date of Publish {{article.publishedAt}}</em> 
+                   <em class="text-primary fw-bold">Authored by {{article.author}} & published on {{article.publishedAt}}</em> 
 
                 </div>
             </div>
