@@ -1,21 +1,32 @@
 {%extends 'base.html'%}
 {% block content %}
 
-<div class="card text-center col-md-6">
-    <div class="card-header">
-      Featured
-    </div>
-    <div style="margin-top: 5px;">
-        <img src="{{articles.urlToImage}}" class="img-responsive" alt="" style="height: 120px; ">
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-    <div class="card-footer text-muted">
-      2 days ago
-    </div>
-  </div>
+<div class="container-fluid bg-light">
+    <h2 class="text-center">Our Latest, Hottest Articles</h2>
+    <div class="row">
+        {% for article in articles %}
+        <div class="col-md-4">
 
+            <div class="card border-info mb-3">
+                <div style="margin-top: 5px;">
+                    <img src="{{article.urlToImage}}" class="img-responsive" alt="" style="height: 200px; width:100%; ">
+                </div>
+                <div class="card-header">
+                    <h4 class="title">
+                        {{article.title}}
+                    </h4>
+                </div>
+                <hr>
+                <div class="card-body text-danger">
+                    <p class="desc">{{article.description}}</p>
+                    <a href="{{article.url}}" class="btn btn-primary" target="_blank"">Read
+                        Full Article</a>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
   {% endblock%}
