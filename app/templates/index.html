@@ -1,12 +1,10 @@
 {%extends 'base.html'%}
 {%block content%}
 <div class="container-fluid">
-    <h2 class="text-center" id="title"> <span>New</span> Sources</h2>
-
-    <div class="row text-center">
+    <h2 class="text-center" id="title"> <span class="text-white">New</span> Sources</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for news_source in sources%}
-        <div class="col-md-4 d-flex justify-content-center">
-
+        <div class="col mb-2 " id="col">
             <div class="card  text-center mb-3 p-3" id="article-card">
                 <div>
                     <h5 class="card-title fw-bold fs-4">{{news_source.name}}</h5>
@@ -29,9 +27,10 @@
                 </div>
             </div>
         </div>
+        {%endfor%}
 
     </div>
 </div>
 
-{%endfor%}
+
 {%endblock%}

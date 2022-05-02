@@ -1,9 +1,10 @@
 *{
-    font-family: 'Darker Grotesque', sans-serif;
-    
-    
+    font-family: 'Darker Grotesque', sans-serif; 
+      
 }
-
+.container-fluid{
+    background-color: #1e1e21;
+}
     
  ul li{
     list-style-type: none;
@@ -24,5 +25,6 @@
 }
 #article-card{
     height: 80vh;
-    background-color: red;
+    background-color: #ecf1f3;
+    
 }
