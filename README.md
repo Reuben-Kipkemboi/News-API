@@ -1,6 +1,6 @@
 # NewsApp 
 
-## By Reuben Kipkemboi
+### By Reuben Kipkemboi
 
 ## Table of Content
 
